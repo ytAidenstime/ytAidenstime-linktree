@@ -29,6 +29,10 @@ const recentEmails = document.getElementById("recent-email");
 
 const settingsSaveBtn = document.getElementById("settings-save");
 
+// notifications
+const notificationWrapper = document.getElementById("notification-wrapper");
+const notificationText = document.getElementById("notification-text");
+
 // email view
 const emailContentWrapper = document.getElementById("email-content");
 const emailViewInfo = document.getElementById("email-view-info");
@@ -128,7 +132,7 @@ directoryInput.addEventListener("click", async () => {
 })
 
 settingsSaveBtn.addEventListener("click", async () => {
-  if(!appDirectory) return alert("Please select an app directory");
+  if(!appDirectory) return notify("Please select an app directory");
 
   window.electronAPI.setSettings({
     backend: {
@@ -143,6 +147,8 @@ settingsSaveBtn.addEventListener("click", async () => {
     port: portInput.value,
     secret: secretInput.value
   }
+
+  notify("Successfully saved settings!");
 })
 
 sendBtn.addEventListener("click", async () => {
@@ -159,7 +165,7 @@ sendBtn.addEventListener("click", async () => {
     }
   })
 
-  if(!response.status) return alert(response.message);
+  if(!response.status) return notify(response.message);
 
   const date = new Date();
 
@@ -187,14 +193,13 @@ sendBtn.addEventListener("click", async () => {
   subjectInput.value = "";
   textData.innerHTML = "";
 
-
-  alert(response.message);
+  notify(response.message);
 })
 
 function updateEmails() {
   recentEmails.innerHTML = ""
 
-  emailsSent.forEach((email) => {
+  emailsSent.reverse().forEach((email) => {
     const emailAddr = email.to;
 
     const startLetter = emailAddr.slice(0, 1);
@@ -234,6 +239,21 @@ function closePopups() {
   popupSend.style.display = "none";
   popupSettings.style.display = "none";
   emailViewWrapper.style.display = "none";
+}
+
+// show notification
+async function notify(message) {
+  notificationText.textContent = message
+  notificationWrapper.style.display = "flex";
+
+  await wait(3);
+  notificationWrapper.style.display = "none";
+}
+
+function wait(delay) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, delay * 1000);
+  })
 }
 
 // DATA LOADER - Loads from localstorage our directory path (this is the only thing that is local storage so that we can get the path to then load the data from our project directory)

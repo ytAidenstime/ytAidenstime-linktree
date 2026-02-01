@@ -103,6 +103,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  user-select: none;
+  cursor: pointer;
 }
 
 .app .left-wrapper .recent-wrapper .recent .top-wrapper {
@@ -452,4 +454,17 @@ body {
   .popup-email-viewer .email-view {
     height: 80%;
   }
+}
+
+.notification {
+  position: absolute;
+  left: 100%;
+  top: 100%;
+  transform: translate(-110%, -150%);
+  background: rgb(6, 133, 165);
+  color: #cccccc;
+  padding: 10px 15px;
+  border-radius: 5px;
+  width: 200px;
+  display: none;
 }

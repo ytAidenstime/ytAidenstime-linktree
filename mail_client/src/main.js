@@ -15,7 +15,7 @@ const createWindow = () => {
     autoHideMenuBar: true,
     icon: path.join(__dirname, "assets/icons/app.ico"),
     webPreferences: {
-      devTools: true,
+      devTools: false,
       preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY,
     },
   });
