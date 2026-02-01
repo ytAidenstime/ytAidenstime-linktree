@@ -1,0 +1,455 @@
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2c2c2c;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #004666;
+  border-radius: 4px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background: #222222;
+  padding: 20px;
+}
+
+.app {
+  display: flex;
+  gap: 10px;
+  height: calc(100vh - 40px);
+}
+
+.app .left-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 200px;
+  min-height: calc(100vh - 40px);
+}
+
+.app .right-wrapper {
+  flex: 2;
+  background: #1A1A1A;
+  border-radius: 8px;
+  color: #ccc;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.app .right-wrapper .stats-wrapper {
+  display: flex;
+}
+
+.app .right-wrapper .stats-wrapper .stat {
+  background: rgb(34, 34, 34);
+  padding: 20px;
+  text-align: center;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 6px;
+  border: 1px solid rgb(44, 44, 44);
+}
+
+.app .right-wrapper .stats-wrapper .stat span {
+  font-size: 30px;
+}
+
+.app .left-wrapper button {
+  background: #0867b4;
+  border: none;
+  padding: 10px 15px;
+  color: #ccc;
+  font-size: 17px;
+  border-radius: 5px;
+  width: 100%;
+  transition: all .30s ease;
+}
+
+.app .left-wrapper button:hover {
+    background: #075596;
+}
+
+.app .left-wrapper .recent-wrapper {
+  display: flex;
+  flex-direction: column;
+  background: #1A1A1A;
+  padding: 10px;
+  color: #ccc;
+  gap: 25px;
+  border-radius: 8px;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.app .left-wrapper .recent-wrapper .recent {
+  background: #282828;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.app .left-wrapper .recent-wrapper .recent .top-wrapper {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+}
+
+.app .left-wrapper .recent-wrapper .recent p {
+  color: #aaaaaa;
+}
+
+.popup-send {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  background: #161616;
+  color: #ccc;
+  border: 1px solid rgb(36, 36, 36);
+  padding: 10px;
+  border-radius: 8px;
+  transform: translate(-50%, 50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 50%;
+  display: none;
+}
+
+.popup-send .input-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.popup-send .input-wrapper .inputs {
+  display: flex;
+  gap: 10px;
+}
+
+.popup-send .input-wrapper button {
+  padding: 5px 15px;
+  border: none;
+  background: rgb(41, 41, 41);
+  color: #ccc;
+  border-radius: 4px;
+  transition: all .30s ease;
+}
+
+.popup-send .input-wrapper input {
+  background: rgb(41, 41, 41);
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  outline: none;
+  color: #ccc;
+  transition: all .30s ease;
+}
+
+.popup-send .input-wrapper input:hover {
+  background: rgb(48, 48, 48)
+}
+
+.popup-send .input-wrapper input:focus {
+  background: rgb(48, 48, 48)
+}
+
+.popup-send .input-wrapper button:hover {
+  background: rgb(48, 48, 48)
+}
+
+.popup-send .text-area {
+    background: rgb(41, 41, 41);
+    border-radius: 4px;
+    height: 100%;
+    outline: none;
+    transition: all .30s ease;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+.popup-send .text-area:hover {
+    background: rgb(48, 48, 48)
+}
+
+.popup-send .text-area:focus {
+      background: rgb(48, 48, 48)
+}
+
+.popup-send .bottom-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.popup-send .bottom-wrapper .options-wrapper {
+  flex: 2;
+  display: flex;
+  gap: 13px;
+}
+
+.popup-send .bottom-wrapper button {
+  flex: 1;
+}
+
+.icon {
+  background: rgb(49, 49, 49);
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid rgb(56, 56, 56);
+  transition: all .30s ease;
+  user-select: none;
+  cursor: pointer;
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.icon:hover {
+  background: rgb(66, 66, 66);
+}
+
+.popup-send .bottom-wrapper button {
+  border: none;
+  background: #0867b4;
+  color: #ccc;
+  border-radius: 4px;
+  height: 100%;
+  transition: all .30s ease;
+}
+
+.popup-send .bottom-wrapper button:hover {
+  background: rgb(7, 91, 160)
+}
+
+.input-color-select {
+  display: none;
+}
+
+.app .left-wrapper .button-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.app .left-wrapper .button-wrapper button {
+  font-size: 15px;
+}
+
+.app .left-wrapper .button-wrapper .icon-settings {
+  background: rgb(46, 46, 46);
+  height: 100%;
+  width: 50px;
+  border: 1px solid rgb(54, 54, 54);
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: all .30s ease;
+}
+
+.app .left-wrapper .button-wrapper .icon-settings:hover {
+  background: rgb(58, 58, 58);
+}
+
+.popup-settings {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+  background: #161616;
+  border: 1px solid rgb(34, 34, 34);
+  border-radius: 8px;
+  padding: 20px;
+  color: #ccc;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  display: none;
+}
+
+.popup-settings .top-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup-settings .top-wrapper .button-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.popup-settings .top-wrapper button {
+  padding: 5px 15px;
+  border: none;
+  background: rgb(41, 41, 41);
+  color: #ccc;
+  border-radius: 4px;
+  transition: all .30s ease;
+  height: 40px;
+}
+
+.popup-settings .top-wrapper button:hover {
+  background: rgb(48, 48, 48)
+
+}
+
+.popup-settings .bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.popup-settings .bottom-wrapper .options-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
+
+.popup-settings .bottom-wrapper .options-wrapper h3 {
+  text-align: center;
+}
+
+.popup-settings .bottom-wrapper .options-wrapper .options {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding-right: 10px;
+  max-height: 15rem;
+}
+
+.popup-settings .bottom-wrapper button {
+  margin-top: auto;
+  flex: 1;
+}
+
+.popup-settings .bottom-wrapper .options-wrapper .options {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.popup-settings .bottom-wrapper .options-wrapper .options input {
+  background: rgb(41, 41, 41);
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  outline: none;
+  color: #ccc;
+  transition: all .30s ease;
+}
+
+.popup-settings .bottom-wrapper .options-wrapper .options input:hover {
+  background: rgb(48, 48, 48)
+}
+
+.popup-settings .bottom-wrapper .options-wrapper .options input:focus {
+  background: rgb(48, 48, 48)
+}
+
+.popup-settings .bottom-wrapper .options-wrapper .options .file-select {
+  background: rgb(41, 41, 41);
+  border: none;
+  color: #6e6e6e;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 15px;
+  font-size: 12px;
+  border-radius: 4px;
+  transition: all .30s ease;
+}
+
+.popup-settings .bottom-wrapper .options-wrapper .options .file-select:hover {
+  background: rgb(48, 48, 48)
+}
+
+.popup-settings .bottom-wrapper button {
+  border: none;
+  background: #0867b4;
+  color: #ccc;
+  padding: 7px;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: all .30s ease;
+}
+
+.popup-settings .bottom-wrapper button:hover {
+  background: #065392;
+}
+
+.popup-email-viewer {
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  background: #161616;
+  border: 1px solid rgb(36, 36, 36);
+  padding: 14px;
+  border-radius: 8px;
+  transform: translate(50%, 50%);
+  width: 50rem;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 70%;
+  display: none;
+}
+
+.popup-email-viewer .email-view {
+  background: rgb(27, 27, 27);
+  border-radius: 7px;
+  padding: 25px;
+  box-sizing: border-box;
+  color: #ccc;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
+  min-height: 0;
+}
+
+.popup-email-viewer .email-view .email-info {
+  color: #a3a3a3;
+}
+
+.popup-email-viewer .email-view .email {
+  overflow-y: scroll;
+}
+
+.popup-email-viewer button {
+  margin-left: auto;
+  padding: 5px 25px;
+  background: #0867b4;
+  border: none;
+  color: #ccc;
+  border-radius: 4px;
+  font-size: 17px;
+  transition: all .30s ease;
+}
+
+.popup-email-viewer button:hover {
+    background: #075a9e;
+}
+
+@media (max-width: 1000px) {
+  .popup-email-viewer {
+    width: 80%;
+    height: 50%;
+  }
+  .popup-email-viewer .email-view {
+    height: 80%;
+  }
+}

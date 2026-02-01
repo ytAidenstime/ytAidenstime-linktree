@@ -1,0 +1,93 @@
+{
+    "settings": {
+        "profile_image": "https://i.imgur.com/Xsdy09C.png",
+        "title": "Welcome to my link tree!",
+        "tab_title": "LinkTree",
+        "tab_img": "https://i.imgur.com/X4IjZmy.png",
+        "links": [
+            {
+                "name": "Youtube (My Channel)",
+                "icon": "YouTube",
+                "link": "https://www.youtube.com/@CutWayEdits"
+            },
+            {
+                "name": "Youtube (Company Channel)",
+                "icon": "YouTube",
+                "link": "https://www.youtube.com/@CutWayEdits"
+            },
+            {
+                "name": "MetaMesh Hosting",
+                "icon": "Dns",
+                "link": "https://metamesh.ca"
+            }
+        ],
+        "countdowns": [
+            {
+                "title": "Birthday Countdown",
+                "date": {
+                    "month": "November",
+                    "day": 21,
+                    "year": 2026,
+                    "time": "12:00 AM"
+                },
+                "styles": {
+                    "color": "grey"
+                }
+            },
+            {
+                "title": "Christmas Countdown",
+                "date": {
+                    "month": "December",
+                    "day": 25,
+                    "year": 2026,
+                    "time": "12:00 AM"
+                },
+                "styles": {
+                    "color": "red"
+                }
+            }
+        ]
+    },
+    "announcements": [
+        {
+            "icon": "Warning",
+            "color": "gold",
+            "info": "Lorem Ipsum"
+        },
+        {
+            "icon": "CheckCircle",
+            "color": "green",
+            "info": "Lorem Ipsum"
+        },
+        {
+            "icon": "GppBad",
+            "color": "red",
+            "info": "Lorem Ipsum"
+        }
+    ],
+    "modules": {
+        "backend": {
+            "host": "http://localhost",
+            "port": 443,
+            "enabled": true
+        },
+        "mail_list": {
+            "enabled": true,
+            "customization": {
+                
+            }
+        },
+        "contact_form": {
+            "enabled": true,
+            "customization": {
+                "heading": "Contact Me",
+                "content": "Please feel free to fill out the form below and i will gladly reach back out to you."
+            }
+        }
+    },
+    "customization": {
+        "theme": "default_theme",
+        "layout": "default_lay",
+        "effect": "fire"
+    }
+}

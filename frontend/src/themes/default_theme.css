@@ -1,0 +1,154 @@
+body {
+  background: rgb(24, 24, 24);
+  color: #f7f7f7cc;
+  font-family: sans-serif;
+}
+
+.link-wrapper .link {
+  background: rgb(31, 31, 31);
+  border-radius: 4px;
+  border: 1px solid rgb(36, 36, 36);
+  transition: all .30s ease;
+  user-select: none;
+  cursor: pointer;
+}
+
+.link-wrapper .link:hover {
+  background: rgb(37, 37, 37);
+}
+
+.contact-wrapper .inputs .input input,
+.contact-wrapper .inputs .input textarea {
+  background: rgb(31, 31, 31);
+  border: 1px solid rgb(36, 36, 36);
+  font-size: 17px;
+  padding: 10px;
+  outline: none;
+  border-radius: 4px;
+  color: #cccc;
+  transition: all .30s ease;
+}
+
+.contact-wrapper .inputs .input textarea {
+  max-width: 100%;
+  min-width: 100%;
+  box-sizing: border-box;
+  height: 150px;
+}
+
+.contact-wrapper .inputs .input input:hover,
+.contact-wrapper .inputs .input textarea:hover {
+    background: rgb(44, 44, 44);
+}
+
+.contact-wrapper .inputs .input input:focus,
+.contact-wrapper .inputs .input textarea:focus {
+    background: rgb(44, 44, 44);
+}
+
+.contact-wrapper .inputs {
+  color: rgb(160, 160, 160);
+  font-size: 15px;
+}
+
+.contact-wrapper .inputs button {
+  background: rgb(31, 31, 31);
+  border: 1px solid rgb(36, 36, 36);
+  font-size: 17px;
+  padding: 10px;
+  outline: none;
+  border-radius: 4px;
+  color: #cccc;
+  transition: all .30s ease;
+}
+
+.contact-wrapper .inputs button:hover {
+      background: rgb(44, 44, 44);
+}
+
+.countdown-wrapper {
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.announcement-item {
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.mail-wrapper input {
+  background: rgb(31, 31, 31);
+  border: 1px solid rgb(36, 36, 36);
+  font-size: 17px;
+  padding: 10px;
+  outline: none;
+  border-radius: 4px;
+  color: #cccc;
+  transition: all .30s ease;
+}
+
+.mail-wrapper input:hover {
+  background: rgb(44, 44, 44);
+}
+
+.mail-wrapper input:focus {
+  background: rgb(44, 44, 44);
+}
+
+.mail-wrapper button {
+  background: rgb(31, 31, 31);
+  border: 1px solid rgb(36, 36, 36);
+  color: #cccc;
+  padding: 10px;
+  font-size: 17px;
+  transition: all .30s ease;
+}
+
+.mail-wrapper button:hover {
+  background: rgb(44, 44, 44);
+}
+
+.optout-wrapper {
+  background: rgb(27, 27, 27);
+  border: 1px solid rgb(37, 37, 37);
+  padding: 15px;
+  border-radius: 7px;
+}
+
+.optout-wrapper input {
+  background: rgb(37, 37, 37);
+  border: 1px solid rgb(48, 48, 48);
+  border-radius: 4px;
+  font-size: 17px;
+  padding: 10px 10px;
+  outline: none;
+  color: #cccc;
+  transition: all .30s ease;
+}
+
+.optout-wrapper input:hover {
+    background: rgb(54, 54, 54);
+}
+
+.optout-wrapper input:focus {
+    background: rgb(54, 54, 54);
+}
+
+.optout-wrapper span {
+  font-size: 20px;
+}
+
+.optout-wrapper button {
+  background: rgb(37, 37, 37);
+  border: 1px solid rgb(48, 48, 48);
+  border-radius: 4px;
+  font-size: 17px;
+  padding: 10px 10px;
+  outline: none;
+  color: #cccc;
+  transition: all .30s ease;
+}
+
+.optout-wrapper button:hover {
+      background: rgb(54, 54, 54);
+}

@@ -1,0 +1,45 @@
+{
+    "settings": {
+        "webserver": {
+            "port": 443
+        },
+        "frontend": {
+            "url": "http://localhost:5173"
+        },
+        "security": {
+            "keys": ["exampletestkey7233845$&*#&*_"],
+            "ratelimit": {
+                "points": 100,
+                "duration": 300
+            }
+        },
+        "database": {
+            "host": "localhost",
+            "port": "3306",
+            "username": "root",
+            "password": "",
+            "database": "linktree"
+        },
+        "smtp": {
+            "host": "smtp.gmail.com",
+            "port": 587,
+            "secure": false,
+            "auth": {
+                "user": "aidenaidensmith30@gmail.com",
+                "pass": "zsyf pyzb nizu gykc"   
+            }
+        }
+    },
+    "stats": {
+        "enabled": true,
+        "every": 24
+    },
+    "modules": {
+       "contact_form": {
+            "enabled": true
+       },
+       "mail_list": {
+            "enabled": true
+       }
+    }
+}
